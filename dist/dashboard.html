@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="assets/css/circular.css">
+    <link rel="stylesheet" href="assets/css/graph.css">
+
+  <!-- sweetalert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+
+     <!-- js charting script -->
+     <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+     <script type="text/javascript" src="https://code.jscharting.com/latest/modules/toolbar.js"></script>
+     <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+     
+
+    <!-- icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+          <div class="sidebar">
+            <!-- Logo Details -->
+            <div class="logo_details">
+                <ion-icon class = "logo" name="water" ></ion-icon>
+              <div class="logo_name">WaterMS</div>
+              <i class="bx bx-menu" id="btn"></i>
+              <div id="closeBtn" class="close-btn"><i class="bx bx-x"></i></div>
+
+            </div>
+
+            <!-- List of side bar -->
+            <ul class="nav-list">
+                <li>
+                  <a href="dashboard.html">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="link_name">Dashboard</span>
+                  </a>
+                  <span class="tooltip">Dashboard</span>
+                </li>
+
+
+                <li>
+                    <a href="volume.html">
+                      <i class="bx bx-line-chart"></i>
+                      <span class="link_name">Data Visualization</span>
+                    </a>
+                    <span class="tooltip">Data Visualization</span>
+                  </li>
+      
+                <li>
+                  <a href="table.html">
+                    <i class='bx bx-table'></i>
+                    <span class="link_name">Data Table</span>
+                  </a>
+                  <span class="tooltip">Data Table</span>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="link_name">Settings</span>
+                  </a>
+                  <span class="tooltip">Settings</span>
+                </li>
+
+                <!-- <li class="signout">
+                    <a href="index.html" id="logout">
+                      <i class="bx bx-log-out"></i>
+                      <span class="link_name">Sign-out</span>
+                    </a>
+                    <span class="tooltip">Sign-out</span>
+                  </li> -->
+                <!-- Sign-out -->
+                <li class="profile">
+                  <div class="profile_details">
+                    <img src="/dist/assets/imgs/customer01.jpg" alt="profile image">
+                    <div class="profile_content">
+                      <div class="name">Hattah</div>
+                      <div class="designation">Admin</div>
+                    </div>
+                  </div>
+                  <i class="bx bx-log-out" id="logout"></i>
+                  <span class="tooltip">Log-out</span>
+
+                </li>
+            </ul>
+      </div>
+
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+              <i class="bx bx-menu homebtn" id="homebtn"></i>
+
+                <div class="header">
+                    <h3>Dashboard</h3>
+                </div> 
+                <div class="notif_user">
+
+                      <div class="notif">
+                          <ion-icon name="notifications"></ion-icon>
+                      </div>
+
+                  
+                      <div class="user">
+                          <img src="assets/imgs/user.png" alt="">
+                      </div>
+                </div>
+
+            </div>
+            
+               <!-- notification box -->
+              <div id="notification-box">
+                  <h5>Notification</h5>
+                  <!-- 
+                  <div class="notif-contentwrap">
+                  <div class="notif-content"> -->
+                    <!-- <div class="notif-icon"><i class='bx bxs-bell'></i></div>
+                    <div class="notif-message"> 
+                      <span>You have reached 40% of your target water usage goal </span>
+                        <span class="notif-date">10/20/45 </span>
+                    </div> -->
+                  <!-- </div>
+                </div> -->
+
+              
+            </div>
+            <!-- end notification -->
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+
+                <!-- ======================= Cards 1 ================== -->
+
+                <div class="card" id="card1">
+                    <div>
+                        <div class="cardName">Water Usage</div>
+                        <div class="numbers" id="currentvolume">1,504</div>
+                        <div class="cardDate">Today</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="water-outline"></ion-icon>
+                    </div>
+                </div>
+
+                 <!-- ======================= Cards 2 ================== -->
+               
+                <div class="card"  id="card2" >
+
+                    <div>
+                      <div class="cardName">Temperature</div>
+                        <div class="numbers" id="currenttemp">80000'C</div>
+                        <div class="cardDate">Today</div>
+                      </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="thermometer-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <!-- ======================= Cards 3 ================== -->
+                <div class="card card3"  >
+                    <div id="goalCard">
+                      
+                        <div class="cardgoal">Water Usage Goal <i class='bx bx-target-lock'></i></div>
+                        <div class="cardgoalsub">Set a goal to help manage your water consumption.  </div>
+
+                        <div class="cardbutton">
+                             <!-- Button trigger modal -->
+                            <button type="button" class=" btn-primary" id="openModalBtn">
+                            set goals
+                          </button>
+                      </div>
+                   </div> 
+            
+                
+                <!-- </div>  -->
+
+                <div id="progressContainer" style="display: none;">
+                    <div class="circular-container">
+                         <div class="title-circular">
+                            <div class="cardName-circular">Water usage goal</div>
+                            <!-- <div class="checkbox">
+                                <input type="checkbox" id="click">
+                            </div> -->
+                            <div class="toggle-button">
+                              <input type="checkbox" id="toggleBtn">
+                              <label for="toggleBtn"></label>
+                            </div>
+                          </div>
+                        <div class="circular-progress"  id="card3">
+                            <div>
+                                <span class="progress-value">0%</span>
+                                <br>
+                                <div class="progress-value-sub">of 200 L</div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+            <!-- ======================= end of Cards  ================== -->
+            
+                    <!-- Modal -->
+ <!-- ################################################################################################## -->
+    <!-- <button id="openModalBtn">Open Modal</button> -->
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header"> 
+                    <span class="close">&times;</span>
+                    <h2>Water Usage Goal</h2>
+                    <hr>
+                    <p>Set a goal to help manage your water consumption.</p>
+                    
+                </div>
+
+
+                <div class="Amountinput"> 
+                    <label for="Amount">Amount: </label>
+                    <input type="number" id="Amount" name="Amount" placeholder="Liter" required>
+                </div>
+                <hr>
+                <h3>Notify Me</h3>
+                <span class="modal-subnotif">The system will notify you when the specified threshold is met</span>
+                <!-- range slider -->
+                <div class="slidecontainer"> 
+                    <div class="range">
+                        <div class="sliderValue">
+                            <span id="slidevalue">0</span>
+                        </div>
+                        <div class="field">
+                            <div class="value left">0</div>
+                            <input type="range" min="0" max="100" value="0" steps="1" id="rangevalue">
+                            <div class="value right" id="rightvalue">0%</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of range slider -->
+
+                <div class="modal-buttons">
+                    <button id="closeBtn" class="modal-close">Close</button>
+                    <button id="saveBtn" class="modal-save">Save</button>
+                  </div>
+            </div>
+        </div>
+        
+  <!-- ################################################################################################## -->
+ 
+
+          </div>
+          
+              <!-- ================ Graph Section ================= -->
+              <div class="graphsection">
+                  <div class="timechart" id="timegraph"> 
+
+                  </div>
+                  
+             </div>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/sidebar.js"></script>
+    
+        <!-- Modules -->
+    <script  type="module" src="assets/js/data.js"></script>
+    <script  type="module" src="assets/js/goalset.js"></script>
+    <script  type="module" src="assets/js/notif.js"></script>
+    <script  type="module" src="assets/js/js/signout.js"></script>
+
+
+
+
+      <!-- Firebase SDK -->
+        <!-- Required to import here in html because of using snapshot/onsnapshot function -->
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    
+</body>
+
+</html>

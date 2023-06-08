@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table </title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/datatable.css">
+
+     <!-- js charting script -->
+     <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+     <script type="text/javascript" src="https://code.jscharting.com/latest/modules/toolbar.js"></script>
+     <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+     
+    <!-- icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+       <!-- Jquery -->
+       <!-- I used a different source for datatables. -->
+       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+       <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+       <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+              <div class="sidebar">
+                <!-- Logo Details -->
+                <div class="logo_details">
+                    <ion-icon class = "logo" name="water" ></ion-icon>
+                  <div class="logo_name">WaterMS</div>
+                  <i class="bx bx-menu" id="btn"></i>
+                </div>
+
+                <!-- List of side bar -->
+                <ul class="nav-list">
+                    <li>
+                      <a href="dashboard.html">
+                        <i class="bx bx-grid-alt"></i>
+                        <span class="link_name">Dashboard</span>
+                      </a>
+                      <span class="tooltip">Dashboard</span>
+                    </li>
+
+
+                    <li>
+                        <a href="volume.html">
+                          <i class="bx bx-line-chart"></i>
+                          <span class="link_name">Data Visualization</span>
+                        </a>
+                        <span class="tooltip">Data Visualization</span>
+                      </li>
+          
+                    <li>
+                      <a href="table.html">
+                        <i class='bx bx-table'></i>
+                        <span class="link_name">Data Table</span>
+                      </a>
+                      <span class="tooltip">Data Table</span>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="bx bx-cog"></i>
+                        <span class="link_name">Settings</span>
+                      </a>
+                      <span class="tooltip">Settings</span>
+                    </li>
+
+                    <!-- <li class="signout">
+                        <a href="index.html" id="logout">
+                          <i class="bx bx-log-out"></i>
+                          <span class="link_name">Sign-out</span>
+                        </a>
+                        <span class="tooltip">Sign-out</span>
+                      </li> -->
+                    <!-- Sign-out -->
+                    <li class="profile">
+                      <div class="profile_details">
+                        <img src="/dist/assets/imgs/customer01.jpg" alt="profile image">
+                        <div class="profile_content">
+                          <div class="name">Hattah</div>
+                          <div class="designation">Admin</div>
+                        </div>
+                      </div>
+                      <i class="bx bx-log-out" id="logout"></i>
+                      <span class="tooltip">Log-out</span>
+
+                    </li>
+                </ul>
+          </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="header">
+                    <h3>Data Table</h3>
+                </div> 
+                <div class="notif_user">
+
+                      <div class="notif">
+                          <ion-icon name="notifications"></ion-icon>
+                      </div>
+
+                    
+
+                      <div class="user">
+                          <img src="assets/imgs/user.png" alt="">
+                      </div>
+                </div>
+
+            </div>
+            
+             <!-- notification box -->
+             <div id="notification-box">
+              <h5>Notification</h5>
+ 
+            </div>
+            <!-- end notification -->
+
+            <!-- ======================= Cards ================== -->
+            <section class="Data-section">
+                <table class="table" id="Datatables">
+                  
+                  <thead>
+                      <tr>
+                          <th>#</th>
+                          <th>Date</th>
+                          <th>Volume</th>
+                          <!-- <th>Temperature</th> -->
+                      </tr>
+                  </thead>
+              
+              </table>
+        </div>
+           </section>
+    </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="assets/js/sidebar.js"></script>
+        
+    <!-- Modules -->
+    <script  type="module" src="assets/js/notif.js"></script>
+    <script  type="module" src="assets/js/datatable.js"></script>
+
+
+
+      <!-- Firebase SDK -->
+      <!-- Required to import here in html because of using snapshot/onsnapshot function -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    
+</body>
+
+
+     
+</html>

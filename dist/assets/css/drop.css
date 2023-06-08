@@ -1,0 +1,172 @@
+
+div.drop-container {
+    position: absolute;
+    top: -170px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    }
+  
+    .text-title{
+      width: 100%;
+      min-height: 90vh;
+      /* background-color: var(--white); */
+      position: relative;
+  
+    }
+  div.drop {
+    position: absolute;
+    top: -60%;
+    width: 100%;
+    height: 100%;
+    border-radius: 100% 5% 100% 100%;
+    transform: rotate(-45deg);
+    margin: 0px;
+    background: deepskyblue;
+    animation: drip 5s forwards;
+  }
+
+  /* drop::after{
+    animation: drip 5s ease-out 2s;
+
+  } */
+  
+  .home-title {
+    color: white;
+    position: absolute;
+    font-size: 4em;
+    height: 1em;
+    top: -110px; left: 0; right: 0; bottom: 100px;
+    z-index: 2;
+    margin: auto;
+    text-align: center;
+    opacity: 0;
+    animation: appear 2s 2.5s forwards;
+  }
+  
+  .home-subtitle {
+    color: white;
+    position: absolute;
+    font-size: 1em;
+    height: 1em;
+    width: 70%;
+    top: -40px; left: 0; right: 0; bottom: 0;
+    z-index: 2;
+    margin: auto;
+    text-align: center;
+    opacity: 0;
+    animation: appear 3s 3.5s forwards;
+    font-weight: 500;
+    letter-spacing: 5px;
+
+  }
+
+  .home-button {
+    position: absolute;
+    bottom: 20%;
+    right: 43%;
+    font-size: 1.2rem;
+    /* margin-right: 1rem; */
+    padding: 0.8rem 2.4rem;
+    background: transparent;
+    border-radius: 2rem;
+    text-align: center; 
+    color: deepskyblue;
+    border: 2px solid deepskyblue;
+    animation: appear 7s 7s forwards;
+    opacity: 0;
+
+ }
+
+ .home-button a{
+    text-decoration: none;
+    color: deepskyblue;
+
+ }
+
+ .home-button:hover{
+ background: deepskyblue;
+ }
+ .home-button:hover a{
+      color: whitesmoke;
+
+ }
+  
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  div.drop-container:before,
+  div.drop-container:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 55%;
+    right: 50%;
+    transform: translate(50%) rotateX(75deg);
+    border-radius: 100%;
+    opacity: 0;
+    width: 75%;
+    height: 75%;
+    border: 5px solid skyblue;
+    animation: dripple 5s ease-out 1s;
+  }
+  
+  div.drop-container:after {
+    animation: dripple 2s ease-out 1.7s;
+  }
+  
+  @keyframes drip {
+    45% {
+      top: 0;
+      border-radius: 100% 5% 100% 100%;
+      transform: rotate(-45deg);
+      /* opacity: 1; */
+
+    }
+    100% {
+      top: 0;
+      transform: rotate(0deg);
+      border-radius: 100%;
+      opacity: 0;
+      animation: dripple 2s ease-out 0s forwards; /* Added the "dripple" animation here */
+
+    }
+  }
+  
+  @keyframes dripple {
+    0% {
+      width: 150px;
+      height: 150px;
+    }
+    25% {
+      opacity: 1;
+    }
+    100% {
+      width: 500px;
+      height: 500px;
+      top: -20%;
+      opacity: 0;
+    }
+  }
+
+  /* div.drop.fade {
+    animation: fadeOut 5s 1s;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  } */

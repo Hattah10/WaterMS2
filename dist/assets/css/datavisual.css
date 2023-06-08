@@ -1,0 +1,234 @@
+:root {
+    --blue: #2a2185;
+    --blue2: #098ab7;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+  }
+
+.top-button{
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid rgb(115, 151, 235);
+    height: 50px;
+    /* background-color: antiquewhite; */
+    margin: 10px;
+    padding-left: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: end;
+
+
+}
+
+.top-button .data-btn
+{
+    width: 200px;
+    height: 35px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgb(115, 151, 235);
+    bottom: 0;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.top-button .data-btn a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(226, 242, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* .top-button .top_link:hover{
+    color: black;
+} */
+
+.top-button .data-btn:hover {
+  background-color: azure;
+  border: 2px solid rgb(115, 151, 235);
+  
+}
+
+.top-button .data-btn:hover a{
+    color: black;
+}
+
+/* .top-button .active{
+    color: black;
+    background-color: azure;
+} */
+
+
+/* graph section */
+
+
+.graph-section{
+    width: 98%;
+    /* height: 400px; */
+    border: 1px solid black;
+   margin: auto;
+   border-radius: 20px;
+   box-shadow: 0px 5px 10px 0px rgba(66, 78, 186, 0.5);
+   background: var(--white);
+
+}
+
+.week-header{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 3rem;
+    color: var(--blue2);
+}
+
+/* .week-header h1{
+    font-size: 3rem;
+    color: var(--blue2);
+} */
+
+.week-header span{
+    font-size: 1rem;
+    color: rgb(68, 68, 93);
+}
+
+.graph-main{
+    margin: 5px 0px 50px 20px ;
+
+}
+.graph-section .week-section{
+    float: left;
+    height: 400px;
+    /* margin: 10px; */
+    /* border: 1px solid black; */
+    font: 1em sans-serif;
+    color: var(--blue);
+    padding: 15px;
+    text-align: center;
+}
+
+.graph-section .week-section .averageusage{
+    font-size: 5rem;
+    margin-top: 30px;
+    color: var(--blue);
+}
+
+.graph-section .week-section span {
+    font-weight: lighter;
+    font: 1rem sans-serif;
+    color: var(--black1);
+    top: 10px;
+}
+
+.graph-section .weekreport{
+    height: 400px;
+    margin-left: 10px;
+    overflow:hidden;
+}
+
+
+/* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+}
+@media (max-width: 768px) {
+    .graph-main{
+        margin: 0px 5px 20px 5px ;
+    }
+    .week-header{
+        text-align: center;
+        font-size: 2rem;
+        height: 40px;
+        font-weight: bolder;
+        margin: 0px;  
+
+    }
+    .graph-section .week-section { 
+        float: none;
+        margin-right:0;
+        width:auto;
+        height: 200px;
+
+      }
+
+      .graph-section .weekreport{
+        height: 400px;
+        margin: auto;
+        overflow:hidden;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .graph-main{
+        margin: 0px 5px 20px 5px ;
+    
+    }
+    .week-header{
+        text-align: center;
+        font-size: 1.5rem;
+        height: 40px;
+        font-weight: bolder;
+    }
+    .graph-section .week-section { 
+     float: none;
+     margin-right:0;
+     width:auto;
+     border:0;
+     /* border-bottom:2px solid #000;   */
+   }
+
+   .graph-section .week-section .averageusage{ 
+        font-size: 2rem;
+        margin-top: 0px;
+    }
+    .graph-section .weekreport{
+        height: 400px;
+        width: 100%;
+        margin-top: -90px;
+        overflow:hidden;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .graph-main{
+        margin: 0px 5px 20px 5px ;
+    
+    }
+    .week-header{
+        text-align: center;
+        font-size: 1.5rem;
+        height: 40px;
+        font-weight: bolder;
+    }
+    .graph-section .week-section { 
+     float: none;
+     margin-right:0;
+     width:auto;
+     border:0;
+     /* border-bottom:2px solid #000;   */
+   }
+
+   .graph-section .week-section .averageusage{ 
+        font-size: 2rem;
+        margin-top: 0px;
+    }
+    .graph-section .weekreport{
+        height: 400px;
+        width: 100%;
+        margin-top: -90px;
+        overflow:hidden;
+    }
+ }
+
+ /* .graph-section .weekreport{
+    width: 100%;
+    height: 200px;
+} */
