@@ -391,7 +391,7 @@ footer p a {
 /* features */
 
 .text-features{
-    width: 100%;
+    width: 90%;
   text-align: center;
 }
 
@@ -400,14 +400,14 @@ footer p a {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    /* min-height: 90vh; */
   }
 
-  .title.features h3 {
+  .title.features {
     color: var(--white);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
-    letter-spacing: 9px;
+    letter-spacing: 5px;
 
   }
 

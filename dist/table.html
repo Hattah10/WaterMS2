@@ -32,74 +32,78 @@
 
     <!-- =============== Navigation ================ -->
     <div class="container">
-              <div class="sidebar">
-                <!-- Logo Details -->
-                <div class="logo_details">
-                    <ion-icon class = "logo" name="water" ></ion-icon>
-                  <div class="logo_name">WaterMS</div>
-                  <i class="bx bx-menu" id="btn"></i>
+      <div class="sidebar">
+        <!-- Logo Details -->
+        <div class="logo_details">
+            <ion-icon class = "logo" name="water" ></ion-icon>
+          <div class="logo_name">WaterMS</div>
+          <i class="bx bx-menu" id="btn"></i>
+          <div id="closeBtn" class="close-btn"><i class="bx bx-x"></i></div>
+
+        </div>
+
+        <!-- List of side bar -->
+        <ul class="nav-list">
+            <li>
+              <a href="dashboard.html">
+                <i class="bx bx-grid-alt"></i>
+                <span class="link_name">Dashboard</span>
+              </a>
+              <span class="tooltip">Dashboard</span>
+            </li>
+
+
+            <li>
+                <a href="volume.html">
+                  <i class="bx bx-line-chart"></i>
+                  <span class="link_name">Data Visualization</span>
+                </a>
+                <span class="tooltip">Data Visualization</span>
+              </li>
+  
+            <li>
+              <a href="table.html">
+                <i class='bx bx-table'></i>
+                <span class="link_name">Data Table</span>
+              </a>
+              <span class="tooltip">Data Table</span>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bx bx-cog"></i>
+                <span class="link_name">Settings</span>
+              </a>
+              <span class="tooltip">Settings</span>
+            </li>
+
+            <!-- <li class="signout">
+                <a href="index.html" id="logout">
+                  <i class="bx bx-log-out"></i>
+                  <span class="link_name">Sign-out</span>
+                </a>
+                <span class="tooltip">Sign-out</span>
+              </li> -->
+            <!-- Sign-out -->
+            <li class="profile">
+              <div class="profile_details">
+                <img src="/dist/assets/imgs/user.png" alt="profile image">
+                <div class="profile_content">
+                  <div class="name">User Name</div>
+                  <div class="designation">Admin</div>
                 </div>
+              </div>
+              <i class="bx bx-log-out" id="logout"></i>
+              <span class="tooltip">Log-out</span>
 
-                <!-- List of side bar -->
-                <ul class="nav-list">
-                    <li>
-                      <a href="dashboard.html">
-                        <i class="bx bx-grid-alt"></i>
-                        <span class="link_name">Dashboard</span>
-                      </a>
-                      <span class="tooltip">Dashboard</span>
-                    </li>
-
-
-                    <li>
-                        <a href="volume.html">
-                          <i class="bx bx-line-chart"></i>
-                          <span class="link_name">Data Visualization</span>
-                        </a>
-                        <span class="tooltip">Data Visualization</span>
-                      </li>
-          
-                    <li>
-                      <a href="table.html">
-                        <i class='bx bx-table'></i>
-                        <span class="link_name">Data Table</span>
-                      </a>
-                      <span class="tooltip">Data Table</span>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="bx bx-cog"></i>
-                        <span class="link_name">Settings</span>
-                      </a>
-                      <span class="tooltip">Settings</span>
-                    </li>
-
-                    <!-- <li class="signout">
-                        <a href="index.html" id="logout">
-                          <i class="bx bx-log-out"></i>
-                          <span class="link_name">Sign-out</span>
-                        </a>
-                        <span class="tooltip">Sign-out</span>
-                      </li> -->
-                    <!-- Sign-out -->
-                    <li class="profile">
-                      <div class="profile_details">
-                        <img src="/dist/assets/imgs/customer01.jpg" alt="profile image">
-                        <div class="profile_content">
-                          <div class="name">Hattah</div>
-                          <div class="designation">Admin</div>
-                        </div>
-                      </div>
-                      <i class="bx bx-log-out" id="logout"></i>
-                      <span class="tooltip">Log-out</span>
-
-                    </li>
-                </ul>
-          </div>
+            </li>
+        </ul>
+  </div>
 
         <!-- ========================= Main ==================== -->
         <div class="main">
             <div class="topbar">
+              <i class="bx bx-menu homebtn" id="homebtn"></i>
+
                 <div class="header">
                     <h3>Data Table</h3>
                 </div> 
@@ -149,6 +153,7 @@
     <!-- Modules -->
     <script  type="module" src="assets/js/notif.js"></script>
     <script  type="module" src="assets/js/datatable.js"></script>
+    <script  type="module" src="assets/js/js/signout.js"></script>
 
 
 
